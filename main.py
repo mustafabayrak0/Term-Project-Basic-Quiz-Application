@@ -176,9 +176,7 @@ if __name__ == "__main__":
     for i in user_name_lst:
         print(f"{i[0]}.{i[1]}, {i[2]}", ",", time_convert(float(i[3])))
     fig = plt.figure(figsize=(7, 5))
-    # graph_questions = [asked_questions[0][0], asked_questions[1][0], asked_questions[2][0], asked_questions[3][0],
-    #                    asked_questions[4][0], asked_questions[5][0], asked_questions[6][0], asked_questions[7][0],
-    #                    asked_questions[8][0], asked_questions[9][0]]
+    # It calculates rate of correct answers
     graph_rates = [int(asked_questions[0][7]) / int(asked_questions[0][8]) * 100,
                    int(asked_questions[1][7]) / int(asked_questions[1][8]) * 100,
                    int(asked_questions[2][7]) / int(asked_questions[2][8]) * 100,
@@ -192,5 +190,7 @@ if __name__ == "__main__":
     positions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     plt.title("Rate of questions answered correctly by other users")
     plt.bar(positions, graph_rates, width=0.5, color="g")
-    plt.show()
+    plt.show()        
+    # library codes are used
+
 
