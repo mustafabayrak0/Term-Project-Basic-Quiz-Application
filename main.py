@@ -1,4 +1,4 @@
-# Mustafa Bayrak 150210339
+# Mustafa Bayrak
 import matplotlib.pyplot as plt
 import time
 from random import sample
@@ -177,16 +177,9 @@ if __name__ == "__main__":
         print(f"{i[0]}.{i[1]}, {i[2]}", ",", time_convert(float(i[3])))
     fig = plt.figure(figsize=(7, 5))
     # It calculates rate of correct answers
-    graph_rates = [int(asked_questions[0][7]) / int(asked_questions[0][8]) * 100,
-                   int(asked_questions[1][7]) / int(asked_questions[1][8]) * 100,
-                   int(asked_questions[2][7]) / int(asked_questions[2][8]) * 100,
-                   int(asked_questions[3][7]) / int(asked_questions[3][8]) * 100,
-                   int(asked_questions[4][7]) / int(asked_questions[4][8]) * 100,
-                   int(asked_questions[5][7]) / int(asked_questions[5][8] )* 100,
-                   int(asked_questions[6][7]) / int(asked_questions[6][8] )* 100,
-                   int(asked_questions[7][7]) / int(asked_questions[7][8] )* 100,
-                   int(asked_questions[8][7]) / int(asked_questions[8][8] )* 100,
-                   int(asked_questions[9][7]) / int(asked_questions[9][8] )* 100]
+    graph_rates = []
+    for i in range (10):
+        graph_rates.append(int(asked_questions[i][7]) / int(asked_questions[i][8]) * 100)
     positions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     plt.title("Rate of questions answered correctly by other users")
     plt.bar(positions, graph_rates, width=0.5, color="g")
