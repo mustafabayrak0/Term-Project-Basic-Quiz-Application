@@ -64,7 +64,7 @@ def time_convert(sec):  # this function converts time to minute and second
 def print_questions(questions):
     answer_list_user = []
     asked_questions = sample(questions, 10)
-    start = time.time()  # it is the start of quiz , there is no limitation but faster user wins
+    start = time.time()  # it is the start time of quiz , there is no limitation but faster user wins
     t = 0
     while t < 10:  # while all the questions are not answered
         for i in range(10):
